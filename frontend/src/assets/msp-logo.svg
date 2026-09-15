@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="100%" height="100%">
+  <defs>
+    <!-- Outer Rainbow Gradient -->
+    <linearGradient id="rainbowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ec4899" />
+      <stop offset="25%" stop-color="#a855f7" />
+      <stop offset="50%" stop-color="#3b82f6" />
+      <stop offset="75%" stop-color="#eab308" />
+      <stop offset="100%" stop-color="#f97316" />
+    </linearGradient>
+    
+    <!-- Outer Blue Ring Gradient -->
+    <linearGradient id="blueRingGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1d4ed8" />
+      <stop offset="50%" stop-color="#2563eb" />
+      <stop offset="100%" stop-color="#1e40af" />
+    </linearGradient>
+  </defs>
+
+  <!-- Outer Rainbow Ring -->
+  <circle cx="150" cy="150" r="142" fill="none" stroke="url(#rainbowGrad)" stroke-width="8" />
+
+  <!-- Inner Double Blue Ring -->
+  <circle cx="150" cy="150" r="132" fill="#ffffff" stroke="url(#blueRingGrad)" stroke-width="14" />
+  <circle cx="150" cy="150" r="123" fill="none" stroke="#dc2626" stroke-width="2" />
+  <circle cx="150" cy="150" r="120" fill="none" stroke="#1d4ed8" stroke-width="1.5" />
+
+  <g transform="translate(0, 5)">
+    <!-- MSP Graphic Art -->
+    <g transform="translate(45, 65)">
+      <!-- 'M' - Green check icon style -->
+      <path d="M 12 65 C 12 65 24 30 32 15 C 38 5 45 10 43 25 C 40 45 32 70 32 70 L 48 20 C 52 8 60 10 65 20 C 72 35 78 70 78 70" 
+            fill="none" stroke="#16a34a" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" />
+      <circle cx="28" cy="10" r="9" fill="#16a34a" />
+
+      <!-- 'S' - Deep Blue stylized -->
+      <path d="M 125 22 C 110 12 85 18 85 36 C 85 55 125 50 125 72 C 125 90 95 95 82 82" 
+            fill="none" stroke="#1e3a8a" stroke-width="17" stroke-linecap="round" />
+
+      <!-- 'P' with Red Pen body & Paper lines -->
+      <!-- Red Pen Body -->
+      <path d="M 132 25 L 132 80" stroke="#dc2626" stroke-width="14" stroke-linecap="round" />
+      <!-- Pen Tip -->
+      <polygon points="125,80 139,80 132,98" fill="#dc2626" />
+      <polygon points="129,90 135,90 132,98" fill="#1e293b" />
+      
+      <!-- 'P' Loop -->
+      <path d="M 132 25 C 160 25 168 40 168 50 C 168 62 155 70 132 70" fill="none" stroke="#dc2626" stroke-width="14" stroke-linecap="round" />
+      
+      <!-- Paper document lines next to P -->
+      <g transform="translate(172, 26)" stroke="#1e3a8a" fill="none">
+        <rect x="0" y="0" width="34" height="48" rx="4" stroke-width="4" fill="#ffffff" />
+        <line x1="6" y1="12" x2="28" y2="12" stroke-width="3" />
+        <line x1="6" y1="22" x2="28" y2="22" stroke-width="3" />
+        <line x1="6" y1="32" x2="20" y2="32" stroke-width="3" />
+      </g>
+    </g>
+
+    <!-- Text: MY SYLLABUS PAPER -->
+    <text x="150" y="172" 
+          text-anchor="middle" 
+          fill="#b91c1c" 
+          font-family="Arial, Helvetica, sans-serif" 
+          font-weight="900" 
+          font-size="20" 
+          letter-spacing="0.5">
+      MY SYLLABUS PAPER
+    </text>
+
+    <!-- Tagline: Your Syllabus... Our Responsibility -->
+    <text x="150" y="190" 
+          text-anchor="middle" 
+          fill="#1d4ed8" 
+          font-family="'Brush Script MT', cursive, sans-serif" 
+          font-style="italic" 
+          font-size="13"
+          font-weight="600">
+      Your Syllabus... Our Responsibility
+    </text>
+
+    <!-- Divider Line with Stars -->
+    <line x1="75" y1="202" x2="225" y2="202" stroke="#1e3a8a" stroke-width="1.5" />
+    
+    <!-- 3 Green Stars -->
+    <g fill="#15803d" transform="translate(0, 208)">
+      <!-- Star 1 -->
+      <polygon points="126,0 128,5 133,5 129,8 131,13 126,10 121,13 123,8 119,5 124,5" />
+      <!-- Star 2 -->
+      <polygon points="150,0 152,5 157,5 153,8 155,13 150,10 145,13 147,8 143,5 148,5" />
+      <!-- Star 3 -->
+      <polygon points="174,0 176,5 181,5 177,8 179,13 174,10 169,13 171,8 167,5 172,5" />
+    </g>
+  </g>
+</svg>
