@@ -4,9 +4,10 @@ import {
   Menu, 
   X, 
   User, 
-  ArrowRight
+  ArrowRight,
+  MessageCircle
 } from 'lucide-react';
-import logoSvg from '../assets/msp-logo.svg';
+import logoImg from '../assets/logo-msp.jpeg';
 
 export default function HeaderNav({ onOpenAuth, onOpenPortal }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -69,14 +70,14 @@ export default function HeaderNav({ onOpenAuth, onOpenPortal }) {
       <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-[72px] flex items-center justify-between gap-2 sm:gap-4">
         
         {/* LEFT: Brand Logo & Title */}
-        <a href="#top" className="flex items-center gap-2 sm:gap-3 shrink-0 group min-w-0">
+        <a href="#top" className="flex items-center gap-2.5 sm:gap-3 shrink-0 group min-w-0">
           <img 
-            src={logoSvg} 
+            src={logoImg} 
             alt="My Syllabus Paper Logo" 
-            className="w-8 h-8 sm:w-10 sm:h-10 object-contain bg-[#155EEF]/10 border border-[#155EEF]/20 rounded-xl p-1 transition-transform group-hover:scale-105 shrink-0" 
+            className="w-10 h-10 sm:w-12 sm:h-12 object-contain rounded-full p-0.5 bg-white border border-slate-200 shadow-sm transition-transform group-hover:scale-105 shrink-0" 
           />
-          <div className="flex flex-col min-w-0">
-            <span className="text-sm sm:text-base lg:text-lg font-bold tracking-tight text-[#0F172A] leading-tight group-hover:text-[#155EEF] transition-colors truncate">
+          <div className="flex flex-col min-w-0 justify-center">
+            <span className="text-sm sm:text-base lg:text-lg font-extrabold tracking-tight text-[#0F172A] leading-tight group-hover:text-[#155EEF] transition-colors truncate">
               MY SYLLABUS PAPER
             </span>
             <span className="text-[10px] sm:text-[11px] font-medium text-[#64748B] tracking-wide hidden sm:block truncate">

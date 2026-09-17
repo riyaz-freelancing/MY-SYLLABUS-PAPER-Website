@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { MapPin, Phone, Mail, Clock, Send, ExternalLink, CheckCircle2 } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, Send, ExternalLink, CheckCircle2, MessageCircle } from 'lucide-react';
 
 export default function ContactAddressSection() {
   const [form, setForm] = useState({ name: '', phone: '', email: '', exam: 'UPSC CSE 2026', message: '' });
@@ -52,10 +52,18 @@ export default function ContactAddressSection() {
                 </div>
 
                 <div className="flex items-center gap-3">
+                  <MessageCircle className="w-5 h-5 text-green-500 shrink-0" />
+                  <div>
+                    <strong className="block text-white font-semibold mb-0.5">WhatsApp Support:</strong>
+                    <a href="https://wa.me/917013923933?text=Hi%20My%20Syllabus%20Paper%2C%20I%20want%20to%20know%20more%20about%20your%20courses%20and%20exam%20preparation." target="_blank" rel="noreferrer" className="text-green-400 font-semibold hover:underline transition-colors">+91 70139 23933</a>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-3">
                   <Phone className="w-5 h-5 text-[#155EEF] shrink-0" />
                   <div>
                     <strong className="block text-white font-semibold mb-0.5">Phone:</strong>
-                    <a href="tel:+919876543210" className="hover:text-white transition-colors">+91 98765 43210</a>
+                    <a href="tel:+917013923933" className="hover:text-white transition-colors">+91 70139 23933</a>
                   </div>
                 </div>
 
