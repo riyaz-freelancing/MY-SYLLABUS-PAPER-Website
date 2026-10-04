@@ -5,7 +5,8 @@ import {
   X, 
   User, 
   ArrowRight,
-  MessageCircle
+  MessageCircle,
+  Smartphone
 } from 'lucide-react';
 import logoImg from '../assets/logo-msp.jpeg';
 
@@ -63,21 +64,25 @@ export default function HeaderNav({ onOpenAuth, onOpenPortal }) {
         { label: 'Micro Syllabus Sheets', desc: 'Structured topic breakdown', href: '#revision-vault' },
       ],
     },
+      /* {
+        name: 'Mobile App',
+        href: '#mobile-app',
+      }, */
   ];
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md text-[#0F172A] font-sans border-b border-[#E2E8F0] shadow-sm w-full">
-      <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-[72px] flex items-center justify-between gap-2 sm:gap-4">
+      <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 h-[72px] flex items-center justify-between gap-1.5 sm:gap-4">
         
         {/* LEFT: Brand Logo & Title */}
-        <a href="#top" className="flex items-center gap-2.5 sm:gap-3 shrink-0 group min-w-0">
+        <a href="#top" className="flex items-center gap-1.5 sm:gap-3 shrink min-w-0">
           <img 
             src={logoImg} 
             alt="My Syllabus Paper Logo" 
-            className="w-10 h-10 sm:w-12 sm:h-12 object-contain rounded-full p-0.5 bg-white border border-slate-200 shadow-sm transition-transform group-hover:scale-105 shrink-0" 
+            className="w-8 h-8 xs:w-9 xs:h-9 sm:w-12 sm:h-12 object-contain rounded-full p-0.5 bg-white border border-slate-200 shadow-sm transition-transform group-hover:scale-105 shrink-0" 
           />
           <div className="flex flex-col min-w-0 justify-center">
-            <span className="text-sm sm:text-base lg:text-lg font-extrabold tracking-tight text-[#0F172A] leading-tight group-hover:text-[#155EEF] transition-colors truncate">
+            <span className="text-xs xs:text-sm sm:text-base lg:text-lg font-extrabold tracking-tight text-[#0F172A] leading-tight group-hover:text-[#155EEF] transition-colors truncate">
               MY SYLLABUS PAPER
             </span>
             <span className="text-[10px] sm:text-[11px] font-medium text-[#64748B] tracking-wide hidden sm:block truncate">
@@ -133,42 +138,61 @@ export default function HeaderNav({ onOpenAuth, onOpenPortal }) {
           ))}
         </nav>
 
-        {/* RIGHT: Login & Get Started */}
+        {/* RIGHT: App Download & Login (Desktop) */}
         <div className="hidden md:flex items-center gap-2 sm:gap-2.5 shrink-0">
           
+          {/* Official Google Play Store Direct Link Pill */}
+          <a
+            href="https://play.google.com/store/apps/details?id=com.kxquve.eemcze"
+            target="_blank"
+            rel="noreferrer"
+            className="flex items-center gap-1.5 px-3 py-1.5 bg-emerald-50 text-emerald-700 hover:bg-emerald-100 border border-emerald-300 font-bold text-xs sm:text-sm rounded-xl transition-all shadow-xs cursor-pointer group"
+            title="Download Official App on Google Play Store"
+          >
+            <Smartphone className="w-4 h-4 text-emerald-600 group-hover:scale-110 transition-transform shrink-0" />
+            <span className="hidden xl:inline">Get App</span>
+            <span className="xl:hidden">App</span>
+            <span className="bg-emerald-600 text-white text-[9px] px-1.5 py-0.2 rounded-full uppercase tracking-wider">NEW</span>
+          </a>
+
           {/* Login Button */}
           <button
             onClick={onOpenPortal}
-            className="flex items-center gap-1 px-3 sm:px-3.5 py-1.5 sm:py-2 bg-white border border-[#E2E8F0] text-[#0F172A] font-semibold text-xs sm:text-sm rounded-xl hover:bg-[#F8FAFC] hover:border-slate-300 transition-colors shadow-sm"
+            className="flex items-center gap-1 px-3.5 sm:px-4 py-1.5 sm:py-2 bg-[#155EEF] hover:bg-[#0F172A] text-white font-semibold text-xs sm:text-sm rounded-xl transition-colors shadow-sm"
           >
-            <User className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#155EEF]" />
+            <User className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-white" />
             <span>Login</span>
-          </button>
-
-          {/* Get Started Primary Button */}
-          <button
-            onClick={onOpenPortal}
-            className="flex items-center gap-1 px-3.5 sm:px-4 lg:px-5 py-2 sm:py-2.5 bg-[#155EEF] hover:bg-[#0F172A] text-white font-bold text-xs sm:text-sm rounded-xl shadow-md transition-all active:scale-95 whitespace-nowrap"
-          >
-            <span>Get Started</span>
-            <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
           </button>
 
         </div>
 
         {/* Mobile / Tablet Controls (shows on screens below 1024px) */}
-        <div className="flex lg:hidden items-center gap-1.5 shrink-0">
+        <div className="flex lg:hidden items-center gap-1 xs:gap-1.5 shrink-0">
+          {/* Official Google Play Store Direct Link Pill for Mobile */}
+          <a
+            href="https://play.google.com/store/apps/details?id=com.kxquve.eemcze"
+            target="_blank"
+            rel="noreferrer"
+            className="flex items-center gap-1 px-2 py-1 xs:px-2.5 xs:py-1.5 bg-emerald-50 text-emerald-700 border border-emerald-300 font-bold text-[11px] xs:text-xs rounded-lg xs:rounded-xl shadow-xs cursor-pointer active:scale-95 shrink-0 whitespace-nowrap"
+            title="Download Official App on Google Play Store"
+          >
+            <Smartphone className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+            <span>Get App</span>
+            <span className="bg-emerald-600 text-white text-[8px] px-1 py-0.2 rounded-full uppercase tracking-wider hidden xs:inline">NEW</span>
+          </a>
+
           <button
             onClick={onOpenPortal}
-            className="px-3 py-1.5 rounded-xl bg-blue-50 text-[#155EEF] font-semibold text-xs border border-blue-200"
+            className="px-2 py-1 xs:px-2.5 xs:py-1.5 rounded-lg xs:rounded-xl bg-blue-50 text-[#155EEF] font-semibold text-xs border border-blue-200 shrink-0"
           >
             Login
           </button>
+          
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="p-2 text-[#0F172A] hover:bg-[#F8FAFC] rounded-xl border border-[#E2E8F0]"
+            className="p-1.5 xs:p-2 text-[#0F172A] hover:bg-[#F8FAFC] rounded-lg xs:rounded-xl border border-[#E2E8F0] shrink-0"
           >
-            {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+            {mobileMenuOpen ? <X className="w-4 h-4 xs:w-5 xs:h-5" /> : <Menu className="w-4 h-4 xs:w-5 xs:h-5" />}
           </button>
         </div>
 
@@ -214,8 +238,8 @@ export default function HeaderNav({ onOpenAuth, onOpenPortal }) {
               }}
               className="w-full py-3 bg-[#155EEF] text-white font-bold text-sm rounded-xl flex items-center justify-center gap-2 shadow-md"
             >
-              <span>Get Started Now</span>
-              <ArrowRight className="w-4 h-4" />
+              <User className="w-4 h-4" />
+              <span>Login / Register</span>
             </button>
           </div>
         </div>

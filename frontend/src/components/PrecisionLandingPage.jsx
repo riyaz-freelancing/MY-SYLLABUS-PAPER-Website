@@ -9,6 +9,7 @@ import DailyBriefingSection from './DailyBriefingSection';
 import TestSeriesSection from './TestSeriesSection';
 import LiveCohortsSection from './LiveCohortsSection';
 import MicroSyllabusVault from './MicroSyllabusVault';
+import MobileAppShowcaseSection from './MobileAppShowcaseSection';
 import MentorsSection from './MentorsSection';
 import TestimonialsSection from './TestimonialsSection';
 import EditorialInsightsSection from './EditorialInsightsSection';
@@ -68,6 +69,9 @@ export default function PrecisionLandingPage() {
 
       {/* 9. Study Material & Revision Vault */}
       <MicroSyllabusVault onDownload={handleDownload} />
+
+      {/* 9.5. Official Google Play Mobile App Showcase */}
+      <MobileAppShowcaseSection />
 
       {/* 10. Mentorship ("Learn From Experience. Prepare With Direction.") */}
       <MentorsSection onBookSession={handleOpenDiagnostic} />
